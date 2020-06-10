@@ -1,0 +1,75 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	list-style: none;
+	text-decoration: none;
+	font-family: 'Josefin Sans', sans-serif;
+  }
+  
+  body{
+	 background-color: #EBEBEB;
+  }
+  
+  .app{
+	display: flex;
+	position: relative;
+  }
+  
+  .app .sidebar{
+	width: 200px;
+	height: 100%;
+	background: #393B41;
+	padding: 30px 0px;
+	position: fixed;
+  }
+  
+  .app .sidebar h2{
+	color: #EBEBEB;
+	text-transform: uppercase;
+	margin: -15px 0 10px 0;
+	padding: 0 0 0 20px;
+	font-size: 2em;
+	color: #A9F981;
+  }
+
+  .app .sidebar ul {
+	padding: 0;
+	margin: 0;
+	text-transform: uppercase;
+  }
+  
+  .app .sidebar ul li{
+	padding: 15px;
+	border-bottom: 1px solid #bdb8d7;
+	border-bottom: 1px solid rgba(0,0,0,0.05);
+	border-top: 1px solid rgba(255,255,255,0.05);
+  }    
+  
+  .app .sidebar ul li a{
+	color: #E4E4E4;
+	display: block;
+  }
+  
+  .app .sidebar ul li a .fas{
+	width: 25px;
+  }
+	  
+  .app .sidebar ul li:hover a{
+	color: #A9F981;;
+  }
+  
+  .app .main_content{
+	width: 100%;
+	margin-left: 200px;
+  }
+  
+  .app .main_content .header{
+	padding: 13px;
+	background-color: #393B41;
+	color: #E4E4E4;
+	border-bottom: 1px solid #e0e4e8;
+	text-transform: uppercase;
+	font-size: 2em;
+  }
+
