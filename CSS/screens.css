@@ -1,0 +1,233 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	list-style: none;
+	text-decoration: none;
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+body{
+	background-color: #EBEBEB;
+}
+
+.app{
+	display: flex;
+	position: relative;
+}
+
+.app .sidebar{
+	width: 200px;
+	height: 100%;
+	background: #393B41;
+	padding: 30px 0px;
+	position: fixed;
+}
+
+.app .sidebar h2{
+	color: #EBEBEB;
+	text-transform: uppercase;
+	margin: -15px 0 10px 0;
+	padding: 0 0 0 20px;
+	font-size: 2em;
+	color: #A9F981;
+}
+
+.app .sidebar ul {
+	padding: 0;
+	margin: 0;
+	text-transform: uppercase;
+}
+
+.app .sidebar ul li{
+	padding: 15px;
+	border-bottom: 1px solid #bdb8d7;
+	border-bottom: 1px solid rgba(0,0,0,0.05);
+	border-top: 1px solid rgba(255,255,255,0.05);
+}    
+
+.app .sidebar ul li.active a {
+	color: #A9F981;
+}
+
+.app .sidebar ul li a{
+	color: #E4E4E4;
+	display: block;
+}
+
+.app .sidebar ul li a .fas{
+	width: 25px;
+}
+
+.app .sidebar ul li:hover a{
+	color: #A9F981;;
+}
+
+.app .main_content{
+	margin-left: 200px;
+	width: 100%;
+}
+
+.app .main_content .header{
+	padding: 13px;
+	background-color: #393B41;
+	color: #E4E4E4;
+	border-bottom: 1px solid #e0e4e8;
+
+}
+
+.app .main_content .header p{
+	text-transform: uppercase;
+	font-size: 2em;
+	padding-left: 30px;
+}
+
+.grid_container {
+	display: grid;
+	grid-column-gap: 30px;
+	grid-row-gap: 30px;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 465px;
+	padding: 30px 30px;
+  }
+  
+  .grid_item {
+	background-color: #ffffff;
+	padding: 25px 10px;
+	text-transform: uppercase;
+	margin: 0;
+	border-radius: 10px;
+	box-shadow: 5px 5px 2px rgb(211, 211, 211);
+	opacity: 0.5;
+  }
+
+  .grid_item h1{
+	color: #919191;
+	font-size: 1.2em;
+	padding: 0;
+	margin: 0;
+}
+
+  .grid_item h2{
+	color:#919191;
+	font-size: 0.7em;
+  }
+
+  
+  .test h2{
+	text-align: center;
+	color:#919191;
+	font-size: 1.5em;
+	padding: 45px 0;
+	font-weight: lighter;
+  }
+
+  .grid_content{
+	display: flex;
+	justify-content: space-between;
+	padding: 0;
+  }
+
+  .grid_content_tables{
+	font-size: 0.8em;
+	font-weight: 100;
+	display: flex;
+	justify-content: space-between;
+	padding: 70px 0 0 0;
+  }
+
+  .test{
+	  /* display: flex;
+	  align-content: space-around; */
+  }
+
+  #drag1, #drag2{
+	  border: #919191 dashed 2px;
+  }
+
+
+  .btn_filepre, .btn_imgwall{
+	margin: auto;
+	  color: #393B41;
+	  font-size: 1.3em;
+	  font-weight: 550;
+	  text-align: center;
+	  text-transform: uppercase;
+	  background-color: #A9F981;
+	  padding: 5px;
+	  border-radius: 50px;
+	  width: 90%;
+	  cursor: pointer;
+  }
+
+
+/*------ drag and drop--------*/
+
+.dropzone-wrapper {
+	color: #919191;
+	position: relative;
+	height: 150px;
+	margin-top: 20px;
+  }
+  
+  .dropzone-tekst {
+	position: absolute;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+	text-align: center;
+	width: 40%;
+	top: 50px;
+	font-size: 16px;
+  }
+  
+  .dropzone,
+  .dropzone:focus {
+	position: absolute;
+	outline: none !important;
+	width: 100%;
+	height: 150px;
+	opacity: 0;
+  }
+  
+  .dropzone-wrapper:hover,
+  .dropzone-wrapper.dragover {
+	background: rgba(169, 249, 129, 0.171);
+  }
+  
+  .preview-zone {
+	text-align: center;
+	margin-bottom: 20px;
+	margin-top: 10px;
+  }
+  
+  img {
+	display: flex;
+	padding: 20px 20px 20px 40px;
+	width: 90%;
+}
+
+/*----- einde drag and drop--------*/
+
+
+.allContainer{
+	background-color: #ffffff;
+	border-radius: 10px;
+	grid-template-columns: 1fr 1fr 1fr;
+	  grid-template-rows: 1fr 1fr;
+	width: 20%;
+	height: 40px;
+	float: right;
+	margin-top: -40px;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+   
+  }
+  
+  .allContainer > h2{
+	color:#888888;
+	text-transform: uppercase;
+	font-size: 10pt;
+	margin-right: 10px;
+  }

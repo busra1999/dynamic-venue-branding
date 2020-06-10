@@ -9,10 +9,11 @@
 	<meta name="description" content=""/>
 	<meta name="author" content="Noah V. Schijndel"/>
 	<meta name="copyright" content=""/>
-	<link href="CSS\Design.css" type="text/css" rel="stylesheet" id="NormalStyle"/>
+	<link href="CSS\preset.css" type="text/css" rel="stylesheet" id="NormalStyle"/>
 	<link href="CSS\normalize.css" type="text/css" rel="stylesheet" />
 	<link href="CSS\override.css" type="text/css" rel="stylesheet" />
 	<link href="CSS\animate.css" type="text/css" rel="stylesheet" />
+	<link href="CSS\toggle.css" type="text/css" rel="stylesheet" />
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script type="text/javascript" src="JS/Main.js"></script>
@@ -20,26 +21,117 @@
 <body>
 	
 	<div class="app">
-		<div class="sidebar">
-			<h2>Philips</h2>
-			<ul>
-				<li><a href="#"><i class="fas fa-home"></i>Presets</a></li>
-				<li><a href="#"><i class="fas fa-lightbulb"></i>Lights</a></li>
-				<li><a href="#"><i class="fas fa-tv"></i>Screens</a></li>
-				<li><a href="#"><i class="fas fa-adjust"></i>Blinds</a></li>
-				<li><a href="#"><i class="fas fa-thermometer-half"></i>Temperature</a></li>
-				<li><a href="#"><i class="fas fa-cog"></i>Settings</a></li>
-			</ul> 
-		</div>
 		
 		<div class="main_content">
-			<div class="header">Lights</div>  
-			<div class="board"></div>
+			<div class="header"><p>Add or edit preset</p></div> 
+			<div class="grid_container" id="myBtn">
+				<div class="grid_itemadd" >
+					<div class="grid_content">
+						<img src="img/add.png"></img>
+						<h1>Add new</h1>
+					</div>
+				</div>
+				<div class="grid_item" onclick="toMenu()">
+					<img src="img/edit.jpg"></img>
+					<h1>Psv</h1>
+				</div>
+				<div class="grid_item" onclick="toMenu()">
+					<div class="grid_content">
+						<img src="img/edit.jpg"></img>
+						<h1>Sligro</h1>
+					</div>
+				</div>  
+				<div class="grid_item"  onclick="toMenu()">
+					<div class="grid_content">
+						<img src="img/edit.jpg"></img>
+						<h1>Shell</h1>
+					</div>
+				</div>
+				<div class="grid_item"  onclick="toMenu()">
+					<div class="grid_content">
+						<img src="img/edit.jpg"></img>
+						<h1>Fontys</h1>
+					</div>
+				</div>
+				<div class="grid_item"  onclick="toMenu()">
+					<div class="grid_content">
+						<img src="img/edit.jpg"></img>
+						<h1>Workflow</h1>
+					</div>
+				</div>
+				<div class="grid_item"  onclick="toMenu()">
+					<div class="grid_content">
+						<img src="img/edit.jpg"></img>
+						<h1>Relaxing</h1>
+					</div>
+				</div>  
+				<div class="grid_item"  onclick="toMenu()">
+					<div class="grid_content">
+						<img class="images" src="img/edit.jpg"></img>
+						<h1>Meeting</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		<!-- Modal -->
+		<div id="myModal" class="modal">
+			
+			<!-- Modal content -->
+			<div class="modal-content">
+				<div class="modal-header">
+					<h2>Name Preset</h2>
+				</div>
+				<div class="modal-body">
+					<input type="text">
+				</div>
+				<div class="modal-footer">
+					<div class="btn_save" onclick="toMenu()"> Add</div>
+					<div class="btn_delete"> Cancel</div>
+				</div>
+			</div>
+			
 		</div>
 	</div>
+	
+	
 	
 </body>
 
 <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+
+<script>
+	// naar het menu
+	function toMenu(){
+		window.location.href = "lights.html";
+	}
+	
+	// Open modal
+	var modal = document.getElementById("myModal");
+	
+	// button add
+	var btn = document.getElementById("myBtn");
+	
+	// Kruisje
+	var close = document.getElementsByClassName("btn_delete")[0];
+	
+	// Opent bij click op add
+	btn.onclick = function() {
+		modal.style.display = "block";
+	}
+	
+	// Sluiten op kruisje
+	close.onclick = function() {
+		modal.style.display = "none";
+	}
+	
+	// Sluiten zonder kruisje
+	window.onclick = function(event) {
+		if (event.target == modal) {
+			modal.style.display = "none";
+		}
+	}
+</script>
 
 </html>

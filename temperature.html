@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> 
+	<meta http-equiv="Content-Security-Policy"  content="default-src *;  style-src * 'self' 'unsafe-inline' 'unsafe-eval'; script-src * 'self' 'unsafe-inline' 'unsafe-eval';">
+	<meta charset="UTF-8">
+	<meta name="keywords" content=""/>
+	<meta name="description" content=""/>
+	<meta name="author" content="Noah V. Schijndel"/>
+	<meta name="copyright" content=""/>
+	<link href="CSS\temperature.css" type="text/css" rel="stylesheet" id="NormalStyle"/>
+	<link href="CSS\normalize.css" type="text/css" rel="stylesheet" />
+	<link href="CSS\override.css" type="text/css" rel="stylesheet" />
+	<link href="CSS\animate.css" type="text/css" rel="stylesheet" />
+	<link href="CSS\toggle.css" type="text/css" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+	
+</head>
+<body>
+	
+	<div class="app">
+		<div class="sidebar">
+			<h2>Philips</h2>
+			<ul>
+				<li><a href="index.html"><i class="fas fa-home"></i>Presets</a></li>
+				<li><a href="lights.html"><i class="fas fa-lightbulb"></i>Lights</a></li>
+				<li><a href="screens.html"><i class="fas fa-tv"></i>Screens</a></li>
+				<li><a href="blinds.html"><i class="fas fa-adjust"></i>Blinds</a></li>
+				<li class="active"><a href="temperature.html"><i class="fas fa-thermometer-half"></i>Temperature</a></li>
+				<li><a href="settings.html"><i class="fas fa-cog"></i>Settings</a></li>
+			</ul> 
+		</div>
+		
+		<div class="main_content">
+			<div class="header"><p>Temperature</p></div> 
+			<div class="grid_container">
+				<div class="grid_item">
+					<div class="grid_content">
+						<h1>Temperature</h1>
+					</div>
+					<div id="temp">20.0</div>
+				</div>
+				<div class="grid_item">
+					<div class="grid_content">
+						<h1>Controls</h1>
+					</div>
+					<div class="controls">
+						<img class="btn_min" src="img/min.png" onclick=min()></img>
+						<img class="btn_plus" src="img/plus.png" onclick=plus()></img>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+	</div>
+	
+</body>
+
+<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="JS/Main.js"></script>
+
+<script>
+	
+	var clicks = 20.0;	
+	
+	function plus(){
+		clicks  +=0.5;
+		Math.round(clicks * 10) / 10
+		document.getElementById("temp").innerHTML = clicks;
+	} 
+	
+	
+	function min(){
+		clicks  -=0.5;
+		document.getElementById("temp").innerHTML = clicks;
+	} 
+	
+	
+</script>
+
+</html>
